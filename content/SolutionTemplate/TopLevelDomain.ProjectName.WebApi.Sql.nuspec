@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>TopLevelDomain.ProjectName.WebApi.Sql</id>
+        <version>1.0.0.0</version>
+        <description>The TopLevelDomain ProjectName WebApi Sql package</description>
+        <authors>TopLevelDomain</authors>
+        <owners>TopLevelDomain</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    </metadata>
+    <files>
+        <file src="Sql\*.sql" />
+    </files>
+</package>

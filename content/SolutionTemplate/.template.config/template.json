@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Bunnings",
+  "classifications": [
+    "Bunnings",
+    "WebApi"
+  ],
+  "identity": "Bunnings.Templates.WebApi.CSharp",
+  "name": "Bunnings WebApi Application",
+  "shortName": "Bunnings-webapi",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "ProjectName",
+  "preferNameDirectory": true,
+  "symbols": {
+    "TargetFramework": {
+      "type": "parameter",
+      "defaultValue": "net5.0",
+      "replaces": "net5.0"
+    },
+    "CompanyName": {
+      "type": "parameter",
+      "defaultValue": "Bunnings",
+      "replaces": "TopLevelDomain",
+      "FileRename": "TopLevelDomain"
+    },
+    "dockerImageNameRename": {
+      "type": "derived",
+      "valueSource": "name",
+      "valueTransform": "replaceName",
+      "replaces": "DockerImageName"
+    }
+  },
+  "forms": {
+    "replaceName": {
+      "identifier": "chain",
+      "steps": [
+        "lower",
+        "clean",
+        "append"
+      ]
+    },
+    "lower": {
+      "identifier": "lowerCase"
+    },
+    "clean": {
+      "identifier": "replace",
+      "pattern": "[.]",
+      "replacement": "-"
+    },
+    "append": {
+      "identifier": "replace",
+      "pattern": "$",
+      "replacement": "-webapi"
+    }
+  },
+  "sources": [
+    {
+      "rename": {
+        "_gitignore": ".gitignore",
+        "_dockerignore": ".dockerignore",
+        "_gitlab-ci": ".gitlab-ci",
+        "_azure-pipelines": "azure-pipelines"
+      },
+      "modifiers": [
+        {
+          "exclude": [
+            ".git/**/*",
+            ".gitignore",
+            "src/.vs/**/*"
+          ]
+        }
+      ]
+    }
+  ]
+}

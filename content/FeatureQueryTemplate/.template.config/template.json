@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Bunnings",
+  "classifications": [
+    "Bunnings",
+    "WebApi",
+    "Query"
+  ],
+  "identity": "Bunnings.Templates.WebApi.Query.CSharp",
+  "name": "Bunnings WebApi Query",
+  "description": "A WebApi Query",
+  "shortName": "Bunnings-webapiquery",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "defaultName": "QueryFeatureName",
+  "sourceName": "QueryFeatureName",
+  "symbols": {
+    "projectname": {
+      "description": "Namespace for the generated code",
+      "replaces": "ProjectName",
+      "type": "parameter"
+    },
+    "companyname": {
+      "description": "Namespace for the generated code",
+      "defaultValue": "Bunnings",
+      "replaces": "TopLevelDomain",
+      "type": "parameter"
+    }
+  }
+}

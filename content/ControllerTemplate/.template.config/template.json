@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Bunnings",
+  "classifications": [
+    "Bunnings",
+    "WebApi",
+    "Controller"
+  ],
+  "identity": "Bunnings.Templates.WebApi.Controller.CSharp",
+  "name": "Bunnings WebApi Controller",
+  "description": "A WebApi controller",
+  "shortName": "Bunnings-webapicontroller",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "defaultName": "ControllerName",
+  "sourceName": "ControllerName",
+  "symbols": {
+    "projectname": {
+      "description": "Namespace for the generated code",
+      "replaces": "ProjectName",
+      "type": "parameter"
+    },
+    "companyname": {
+      "description": "Namespace for the generated code",
+      "defaultValue": "Bunnings",
+      "replaces": "TopLevelDomain",
+      "type": "parameter"
+    }
+  }
+}
